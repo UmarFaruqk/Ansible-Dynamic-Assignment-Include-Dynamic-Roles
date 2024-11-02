@@ -48,4 +48,11 @@ Now it is time to create a role for MySQL database - it should install the MySQL
 6. Now you can make use of *env-vars\uat.yml* file to define which loadbalancer to use in UAT environment by setting respective environmental variable to true. Using the below code ![reference image](/Pictures/pic15.PNG). The same must work with *apache* LB, so you can switch it by setting respective environmental variable to *true* and other to *false*.
 7. To test this, you can update inventory for each environment and run Ansible against each environment. Uisng this command *ansible-playbook -i inventory/uat.yml playbooks/site.yml* ![reference image](/Pictures/pic16.PNG)
 
+# Push Your Changes To GitHub (Ansible-Config-Mgt)
+1. git init
+2. git pull https://github.com/<your-name>/ansible-config-mgt.git
+3. git remote add origin https://github.com/<your-name>/ansible-config-mgt.git
+4. git branch roles-feature
+5. git switch roles-feature
+
 **Congratulations**: We have learned and practiced how to use Ansible configuration management tool to prepare UAT environment for Tooling web solution.
